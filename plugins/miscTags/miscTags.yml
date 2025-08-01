@@ -11,6 +11,10 @@ settings:
     displayName: Add tags for stash-vr-companion
     description: Add tags useful for stash-vr-companion, export_deovr, DOME, SBS, VR based on filename string
     type: BOOLEAN
+  stashVRCompanionTagsSearchPath:
+    displayName: Search full path for stash-vr-companion
+    description: When adding tags for stash-vr-companion will also check the full path
+    type: BOOLEAN
   addVRTags:
     displayName: Add VR related tags
     description: Add projection based tags 180°, 200°, VR
@@ -43,7 +47,6 @@ settings:
     displayName: Assume missing male performer
     description: For the group makeup tag assume the missing performer is male if there are unknown performers
     type: BOOLEAN
-
   flatStudio:
     displayName: 2d Studio for stash-vr-companion
     description: Comma seperated list of studio number in your instance to tag with export_devor,FLAT for use with stash-vr-companion

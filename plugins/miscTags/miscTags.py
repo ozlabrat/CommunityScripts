@@ -10,6 +10,7 @@ skip_tag = "[MiscTags: Skip]"
 
 # Defaults if nothing has changed in the stash ui
 settings = {"addStashVRCompanionTags": False,
+            "stashVRCompanionTagsSearchPath": False,
             "addVRTags": False,
             "addSoloTags": True,
             "addThreesomeTags": True,
@@ -118,6 +119,10 @@ def processStashVRCompanionTags(scene, tags):
             if k in f["basename"].lower():
                 tags.extend(v["VRCTags"])
                 found = True
+            if settings["stashVRCompanionTagsSearchPath"]:
+                if k in f["path"].lower():
+                    tags.extend(v["VRCTags"])
+                    found = True                
     if found:
         tags.append("export_deovr")
     return None
